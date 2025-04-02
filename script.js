@@ -37,12 +37,14 @@ function addToCart(product) {
   cart.push(product);
   saveCart(cart);
   updateCartUI(cart);
+  console.log("Cart after adding:", JSON.parse(sessionStorage.getItem("cart"))); // Debugging
 }
 
 // Clear cart
 function clearCart() {
   sessionStorage.removeItem("cart");
   updateCartUI([]);
+  console.log("Cart cleared"); // Debugging
 }
 
 // Render products
